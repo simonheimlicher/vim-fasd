@@ -9,10 +9,7 @@ let g:loaded_vim_fasd = 1
 function! s:VimFasd(...)
     if a:0 == 0
         let cmd = 'fasd -d -s'
-        let avail_dirs = system(cmd)
-        for dir in split(avail_dirs, '\n$')
-            echom dir
-        endfor
+        echo system(cmd)
     else
         "echom 'args="'.join(a:000,'|').'"'
         let cmd = "fasd -d -e 'printf %s' " . shellescape(join(a:000,' '))
