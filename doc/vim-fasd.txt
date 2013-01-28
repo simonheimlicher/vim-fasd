@@ -1,0 +1,21 @@
+
+*vim-fasd.txt*  Access fasd directory jumplist from vim
+
+Author:  Simon Heimlicher
+                                                *vim-fasd-author*
+License: Same terms as Vim itself (see |license|)
+
+INTRODUCTION                                    *vim-fasd*
+
+This plugin makes the directory jumplist maintained by fasd accessible
+from vim.
+
+CHANGE WORKING DIRECTORY                        *vim-fasd-cd*
+
+:Fasd DIR
+
+Change to directory returned by
+
+    fasd -d DIR
+
+ vim:tw=78:et:ft=help:norl:
