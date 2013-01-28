@@ -11,14 +11,14 @@ function! s:VimFasd(...)
         let cmd = 'fasd -d -s'
         let avail_dirs = system(cmd)
         for dir in split(avail_dirs, '\n$')
-            echo dir
+            echom dir
         endfor
     else
-        echom 'args="'.join(a:000,'|').'"'
+        "echom 'args="'.join(a:000,'|').'"'
         let cmd = "fasd -d -e 'printf %s' " . shellescape(join(a:000,' '))
-        echom 'cmd="'.cmd.'"'
+        "echom 'cmd="'.cmd.'"'
         let target_dir = system(cmd)
-        echom 'target_dir="'.target_dir.'"'
+        "echom 'target_dir="'.target_dir.'"'
         if empty(target_dir)
             finish
         endif
