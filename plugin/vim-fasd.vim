@@ -23,3 +23,4 @@ function! s:VimFasd(...)
     endif
 endfunction
 command! -nargs=* Fasd call s:VimFasd(<f-args>)
+command! -nargs=* J call s:VimFasd(<f-args>)
